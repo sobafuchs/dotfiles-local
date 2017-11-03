@@ -1,0 +1,8 @@
+
+" Color scheme
+let g:solarized_termcolors = 16
+let g:solarized_contrast = "high"
+set bg=dark
+
+" Ctrl-P configuration
+let g:ctrlp_custom_ignore = 'node_modules\|DS_STORE\|git'

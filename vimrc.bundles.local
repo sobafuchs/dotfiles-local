@@ -1,1 +1,4 @@
 UnPlug 'vim-go'
+UnPlug 'vim-coffee-script'
+
+Plug 'mattn/emmet-vim'
