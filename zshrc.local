@@ -12,3 +12,6 @@ function code {
 
 # awscli
 export PATH=Library/Python/3.6/bin:$PATH
+
+# functions
+source ~/dotfiles-local/functions.sh
