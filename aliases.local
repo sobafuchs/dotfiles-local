@@ -1,22 +1,6 @@
 # aliases vi to vim
 alias vi="vim"
 
-# to knotch folder
-alias knotch-dev="cd ~/Workspace/knotch"
-
-# namespaced execution of knotch docker-compose file
-alias k-compose="docker-compose -p knotch -f ~/Workspace/knotch/ops-docker-dev/docker-compose.yml"
-
-# start up svc-feed bash session
-alias svc-feed-i="k-compose run -p '3000:3000' svc-feed bash"
-
-# reverse tunnel to knotch staging db
-alias knotch-staging-db-tunnel="ssh -L 31000:db.staging.knotch.internal:5432 -A -t -t
-ec2-user@hi.knotch.host"
-
-# reverse tunnel to knotch production db
-alias knotch-prod-db-tunnel="ssh -L 31000:db.production.knotch.internal:5432 -A -t -t ec2-user@ec2-52-87-245-75.compute-1.amazonaws.com"
-
 ##########
 # Docker
 #########
@@ -27,3 +11,5 @@ function stop_all_docker_containers {
 function remove_all_docker_containers {
   docker rm $(docker ps -aq)
 }
+
+source ~/workspace/knotch/dotfiles/aliases.local

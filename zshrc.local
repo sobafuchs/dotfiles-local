@@ -9,3 +9,6 @@ function code {
     open -a "Visual Studio Code" "$argPath"
   fi
 }
+
+# awscli
+export PATH=Library/Python/3.6/bin:$PATH
