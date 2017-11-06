@@ -30,3 +30,6 @@ bind \ split-window -h
 bind - split-window -v
 unbind '"'
 unbind %
+
+# highlight active pane
+set -g window-active-style 'fg=colour250,bg=black'
