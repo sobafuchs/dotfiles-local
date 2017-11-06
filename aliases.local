@@ -1,3 +1,3 @@
 # aliases vi to vim
 alias vi="vim"
-source ~/workspace/knotch/dotfiles/aliases.local
+source ~/workspace/knotch/dotfiles/aliases.sh
