@@ -66,5 +66,8 @@ brew install httpie
 brew install q # use SQL on csvs
 brew install tree
 
+# music
+brew install pianobar # pandora cli
+
 # Removes outdated versions
 brew cleanup
