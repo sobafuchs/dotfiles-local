@@ -66,5 +66,9 @@ brew install httpie
 brew install q # use SQL on csvs
 brew install tree
 
+# audio
+brew install portaudio
+brew install mpg123
+
 # Removes outdated versions
 brew cleanup
