@@ -1,5 +1,5 @@
 # Source project paths so they are globally accessible
-source ~/dotfiles-local/paths.sh
+source ~/dotfiles-local/vars.sh
 
 # vscode
 function code {
