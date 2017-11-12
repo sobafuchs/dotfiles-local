@@ -17,7 +17,7 @@ function code {
 export PATH=Library/Python/3.6/bin:$PATH
 
 # functions
-source ~/dotfiles-local/functions.sh
+source $DOTFILES_PATH/functions.sh
 
 # npm
 export NVM_DIR="$HOME/.nvm"

@@ -1,5 +1,10 @@
 sh ./brew.sh
-git clone git://github.com/thoughtbot/dotfiles.git ~/dotfiles
+
+# clone dotfiles repo if it doesnt exist
+if [ -d ~/dotfiles ]
+then
+  git clone git://github.com/thoughtbot/dotfiles.git ~/dotfiles
+fi
 
 brew tap thoughtbot/formulae
 brew install rcm
