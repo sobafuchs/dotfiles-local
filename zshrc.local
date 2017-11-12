@@ -1,3 +1,6 @@
+# Source project paths so they are globally accessible
+source ~/dotfiles-local/paths.sh
+
 # vscode
 function code {
   if [[ $# = 0 ]]
