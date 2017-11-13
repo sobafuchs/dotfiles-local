@@ -16,14 +16,13 @@ nls() {
 ##########
 # Docker
 ##########
-source ~/dotfiles-local/docker/functions.sh
+source ${DOTFILES_PATH}/docker/functions.sh
 
 #########
 # Projects
 #########
 
-projects=("knotch")
-for i in $projects
+for i in $DOTFILE_PROJECTS
 do
   source ~/workspace/$i/dotfiles/functions.sh
 done
