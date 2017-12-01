@@ -31,5 +31,16 @@ bind - split-window -v
 unbind '"'
 unbind %
 
+
+# auto reload tmux conf
+bind r source-file ${HOME}/.tmux.conf \; display-message "source-file reloaded"
+
+##################
+# Colors
+##################
+
+set -g status-bg colour235
+set -g status-fg colour39
+
 # highlight active pane
 set -g window-active-style 'fg=colour250,bg=black'

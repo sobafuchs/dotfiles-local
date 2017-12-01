@@ -25,3 +25,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # yarn
 export PATH="$PATH:`yarn global bin`"
+
+# RVM
+export PATH="$PATH:$HOME/.rvm/bin"
+
