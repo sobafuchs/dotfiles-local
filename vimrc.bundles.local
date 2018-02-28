@@ -3,3 +3,4 @@ UnPlug 'vim-coffee-script'
 
 Plug 'mattn/emmet-vim'
 Plug 'hashivim/vim-terraform'
+Plug 'leafgarland/typescript-vim'

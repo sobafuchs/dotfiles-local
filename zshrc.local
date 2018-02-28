@@ -24,7 +24,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # loads nvm
 
 # yarn
-export PATH="$PATH:`yarn global bin`"
+export PATH="$PATH:/usr/local/bin"
 
 # RVM
 export PATH="$PATH:$HOME/.rvm/bin"
