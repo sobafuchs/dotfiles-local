@@ -2,6 +2,12 @@
 # Utilities
 ###########
 
+# opens local dotfiles file
+
+edit_dotfiles() {
+  vim $HOME/dotfiles-local/$1*
+}
+
 # Opens or creates a note to be edited
 note() {
   $EDITOR ~/nexus/notes/"$*".txt
