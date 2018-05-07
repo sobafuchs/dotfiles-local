@@ -49,25 +49,32 @@ brew install yarn # for the js lovers
 # ruby
 brew install ruby-build
 
+# IRC client
+brew install irssi
+
 # elixir
 brew install elixir
 
 # databases
 brew install postgresql
-brew install mongodb
+brew install pgcli # syntax highlighting and autocomplete for pg cli
 
 # security
 brew install blackbox
 brew install gpg-agent
 
+# docker
+brew install ctop # performance monitoring for docker containers
+brew install docker-machine-driver-xhyve
+sudo chown root:wheel $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
+sudo chmod u+s $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
+brew tap codekitchen/dinghy
+brew install dinghy
+
 # nifty
 brew install brew-cask # homebrew for macOS apps
-brew install httpie
 brew install q # use SQL on csvs
 brew install tree
-
-# music
-brew install pianobar # pandora cli
 
 # Removes outdated versions
 brew cleanup

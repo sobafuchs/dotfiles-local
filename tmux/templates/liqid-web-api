@@ -1,0 +1,18 @@
+#!/bin/bash
+
+PROJECT_NAME=liqid-web-api
+SESSION=`basename $PROJECT_NAME`
+
+# start tmux session in a detached state
+tmux -2 new-session -d -s $SESSION
+
+tmux rename-window -t $SESSION:1 vim
+
+# The default configuration is to have the bottom pane for interacting with the
+# shell and the top pane to be a vim split
+tmux split-window -v
+tmux select-pane -t 2
+tmux resize-pane -D 15
+
+# attach to the session
+tmux -2 attach -t $PROJECT_NAME

@@ -19,6 +19,10 @@ nls() {
   ls -c ~/nexus/notes/ | grep "$*"
 }
 
+shut_down_postgres() {
+  pg_ctl -D /usr/local/var/postgres stop -s -m fast
+}
+
 ##########
 # Docker
 ##########

@@ -5,4 +5,7 @@ let g:solarized_contrast = "high"
 set bg=dark
 
 " Ctrl-P configuration
-let g:ctrlp_custom_ignore = 'node_modules\|DS_STORE\|git'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_STORE\|git|vendor|public|tmp'
+
+" ruby syntax highlighting is fucked on new vim
+set regexpengine=1

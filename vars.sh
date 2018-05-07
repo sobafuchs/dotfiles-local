@@ -1,9 +1,12 @@
 #!/bin/bash
 
 # paths
-readonly DOTFILES_PATH=$HOME/dotfiles-local
-readonly SIXPLUS_PATH=$HOME/sixplus
-readonly LIQID_PATH=$HOME/workspace/liqid
+DOTFILES_PATH=$HOME/dotfiles-local
+SIXPLUS_PATH=$HOME/sixplus
+LIQID_PATH=$HOME/workspace/liqid
 
 # global vars :/
-readonly DOTFILE_PROJECTS=("liqid")
+DOTFILE_PROJECTS=("liqid")
+
+# global api tokens
+SOCCER_CLI_API_TOKEN="28d7ac9cc23e4a5ba732bbf95bf50537"
