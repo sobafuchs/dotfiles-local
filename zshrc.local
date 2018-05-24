@@ -21,7 +21,7 @@ source $DOTFILES_PATH/functions.sh
 
 # npm
 export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
+. $(brew --prefix nvm)/nvm.sh
 
 # yarn
 export PATH="$PATH:/usr/local/bin"
@@ -35,3 +35,4 @@ export DOCKER_CERT_PATH=/Users/varun/.docker/machine/machines/dinghy
 export DOCKER_TLS_VERIFY=1
 export DOCKER_MACHINE_NAME=dinghy
 export LOGENTRIES_RW_KEY=ca66e911-fa0d-48eb-b121-69e56423bbb4
+
