@@ -78,3 +78,6 @@ brew install tree
 
 # Removes outdated versions
 brew cleanup
+
+# useful stuff
+brew install telnet

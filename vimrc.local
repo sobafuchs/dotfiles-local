@@ -9,3 +9,4 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_STORE\|git|vendor|public|tmp'
 
 " ruby syntax highlighting is fucked on new vim
 set regexpengine=1
+let g:ruby_indent_block_style = 'do'
