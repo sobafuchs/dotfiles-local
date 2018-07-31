@@ -64,6 +64,8 @@ brew install blackbox
 brew install gpg-agent
 
 # docker
+brew install docker
+brew install docker-machine
 brew install ctop # performance monitoring for docker containers
 brew install docker-machine-driver-xhyve
 sudo chown root:wheel $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
@@ -72,7 +74,6 @@ brew tap codekitchen/dinghy
 brew install dinghy
 
 # nifty
-brew install brew-cask # homebrew for macOS apps
 brew install q # use SQL on csvs
 brew install tree
 

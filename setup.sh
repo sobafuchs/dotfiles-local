@@ -1,15 +1,38 @@
-sh ./brew.sh
-sh ./gems.sh
+sudo -v
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# clone dotfiles repo if it doesnt exist
-if [ -d ~/dotfiles ]
-then
-  git clone git://github.com/thoughtbot/dotfiles.git ~/dotfiles
+source ./vars.sh
+
+# Install homebrew if it doesn't exist
+if $(which brew) > /dev/null; then
+	echo "Homebrew is already installed...moving on"
+else
+	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-brew tap thoughtbot/formulae
-brew install rcm
-env RCRC=$HOME/dotfiles/rcrc rcup
+
+echo "Installing brew recipes"
+# sh ./brew.sh
+
+echo "Changing default shell to zsh..."
+sudo dscl . -create /Users/$USER UserShell $(which zsh)
+sudo chsh -s $(which zsh)
+source $DOTFILES_PATH/zshrc
+
+echo "Creating symlink for .zshrc"
+sudo ln -s $DOTFILES_PATH/zshrc $HOME/.zshrc
+
+# setup dotfiles
+echo "Creating symlink for .tmux.conf"
+sudo ln -s $DOTFILES_PATH/tmux.conf $HOME/.tmux.conf
+
+
+echo "Creating symlink for .vimrc"
+sudo ln -s $DOTFILES_PATH/vimrc $HOME/.vimrc
+
+# install plug for vim plugins
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+	     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # install pip
 sudo python2.7 -m ensurepip --default-pip
@@ -19,9 +42,6 @@ sudo python2.7 -m ensurepip --default-pip
 
 # create dinghy vm using xhyve provider
 dinghy create --provider xhyve
-
-# install soccer-cli
-pip install soccer-cli
 
 # install Minikube
 curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64 && \

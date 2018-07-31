@@ -1,5 +1,5 @@
 # Source project paths so they are globally accessible
-source ~/dotfiles-local/vars.sh
+source $HOME/dotfiles/vars.sh
 
 # vscode
 function code {
@@ -18,13 +18,6 @@ export PATH=Library/Python/3.6/bin:$PATH
 
 # functions
 source $DOTFILES_PATH/functions.sh
-
-# npm
-export NVM_DIR="$HOME/.nvm"
-. $(brew --prefix nvm)/nvm.sh
-
-# yarn
-export PATH="$PATH:/usr/local/bin"
 
 # RVM
 export PATH="$PATH:$HOME/.rvm/bin"
