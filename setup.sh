@@ -26,9 +26,11 @@ sudo ln -s $DOTFILES_PATH/zshrc $HOME/.zshrc
 echo "Creating symlink for .tmux.conf"
 sudo ln -s $DOTFILES_PATH/tmux.conf $HOME/.tmux.conf
 
-
 echo "Creating symlink for .vimrc"
 sudo ln -s $DOTFILES_PATH/vimrc $HOME/.vimrc
+
+echo "Creating symlink for gitconfig..."
+sudo ln -s $DOTFILES_PATH/gitconfig $HOME/.gitconfig
 
 # install plug for vim plugins
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \

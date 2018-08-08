@@ -39,6 +39,7 @@ brew install zsh
 brew install bash-completion
 brew install tmux
 brew install reattach-to-user-namespace # necessary for copy paste w/ tmux
+brew install mas
 
 # devops
 brew install terraform
@@ -62,6 +63,7 @@ brew install pgcli # syntax highlighting and autocomplete for pg cli
 # security
 brew install blackbox
 brew install gpg-agent
+brew install git-crypt
 
 # docker
 brew install docker

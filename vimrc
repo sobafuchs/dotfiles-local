@@ -10,6 +10,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'elixir-lang/vim-elixir'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-fugitive'
 Plug 'vim-ruby/vim-ruby'
 Plug 'w0rp/ale'
 call plug#end()
