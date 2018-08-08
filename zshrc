@@ -1,5 +1,7 @@
 # Source project paths so they are globally accessible
 source $HOME/dotfiles/vars.sh
+source $HOME/dotfiles/aliases.sh
+source $HOME/dotfiles/functions.sh
 
 # vscode
 function code {
@@ -22,7 +24,12 @@ source $DOTFILES_PATH/functions.sh
 # RVM
 export PATH="$PATH:$HOME/.rvm/bin"
 
-export PS1="%20<...<%~%<< ϕ "
+setopt prompt_subst
+autoload -U colors && colors
+
+# Use ❯ as the non-root prompt character; # for root
+# Change the prompt character color if the last command had a nonzero exit code
+PS1='$(ssh_info)%{$fg[magenta]%}%~%u $(git_info)%(?.%{$fg[blue]%}.%{$fg[red]%})%(!.#.❯)%{$reset_color%} '
 # env vars for docker + dinghy
 # export DOCKER_HOST=tcp://192.168.64.2:2376
 # export DOCKER_CERT_PATH=/Users/varun/.docker/machine/machines/dinghy

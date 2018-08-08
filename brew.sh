@@ -40,6 +40,7 @@ brew install bash-completion
 brew install tmux
 brew install reattach-to-user-namespace # necessary for copy paste w/ tmux
 brew install mas
+brew install wget
 
 # devops
 brew install terraform

@@ -32,6 +32,7 @@ sudo ln -s $DOTFILES_PATH/vimrc $HOME/.vimrc
 echo "Creating symlink for gitconfig..."
 sudo ln -s $DOTFILES_PATH/gitconfig $HOME/.gitconfig
 
+
 # install plug for vim plugins
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 	     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
