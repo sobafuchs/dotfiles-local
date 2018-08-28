@@ -12,7 +12,7 @@ fi
 
 
 echo "Installing brew recipes"
-# sh ./brew.sh
+sh ./brew.sh
 
 echo "Changing default shell to zsh..."
 sudo dscl . -create /Users/$USER UserShell $(which zsh)
@@ -21,6 +21,9 @@ source $DOTFILES_PATH/zshrc
 
 echo "Creating symlink for .zshrc"
 sudo ln -s $DOTFILES_PATH/zshrc $HOME/.zshrc
+echo "Creating symlink for zsh utilities"
+ln -s $DOTFILES_PATH/zsh/pure.zsh /usr/local/share/zsh/site-functions/prompt_pure_setup
+ln -s $DOTFILES_PATH/zsh/async.zsh /usr/local/share/zsh/site-functions/async
 
 # setup dotfiles
 echo "Creating symlink for .tmux.conf"
