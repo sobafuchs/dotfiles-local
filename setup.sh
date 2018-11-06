@@ -40,6 +40,8 @@ sudo ln -s $DOTFILES_PATH/vimrc $HOME/.vimrc
 echo "Creating symlink for gitconfig..."
 sudo ln -s $DOTFILES_PATH/gitconfig $HOME/.gitconfig
 
+echo "Creating symlink for .agignore"
+ln -s $DOTFILES_PATH/agignore $HOME/.agignore
 
 # install plug for vim plugins
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \

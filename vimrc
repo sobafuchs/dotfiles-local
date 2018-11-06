@@ -81,7 +81,7 @@ let g:solarized_contrast = "high"
 set bg=dark
 
 " Ctrl-P configuration
-let g:ctrlp_custom_ignore = 'node_modules\|DS_STORE\|git|vendor|public|tmp'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_STORE\|git\|vendor\|public\|tmp\|spec/fixtures'
 
 " ruby syntax highlighting is fucked on new vim
 set regexpengine=1
@@ -91,7 +91,8 @@ let g:ruby_indent_block_style = 'do'
 if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
   " use ag in CtrlP for listing files. Respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
   " ag is so fast we dont need a cache
   let g:ctrlp_use_caching = 0
 endif
+
