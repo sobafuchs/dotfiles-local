@@ -23,6 +23,11 @@ shut_down_postgres() {
   pg_ctl -D /usr/local/var/postgres stop -s -m fast
 }
 
+# generate vim documentation
+function generate_ri_bundle_docs() {
+  bundle list | tr -d '*(,)' | awk '{print $1, "--version", $2}' | xargs -n3 gem rdoc --ri --no-rdoc
+}
+
 ##########
 # Docker
 ##########
