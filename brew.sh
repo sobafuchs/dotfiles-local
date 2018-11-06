@@ -32,7 +32,7 @@ brew install homebrew/dupes/openssh
 # survival
 brew install vim
 brew install git
-brew install ack
+brew install the_silver_searcher
 brew install gdbm
 brew install readline
 brew install zsh
@@ -43,7 +43,10 @@ brew install mas
 brew install wget
 
 # devops
+brew tap Yleisradio/terraforms
+brew install chtf
 brew install terraform
+brew install kubernetes-helm
 
 # node
 brew install yarn # for the js lovers

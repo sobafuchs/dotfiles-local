@@ -12,7 +12,9 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
 Plug 'w0rp/ale'
+Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 
 set backspace=2		" Backspace deletes like most programs in insert mode
@@ -35,11 +37,6 @@ set list listchars=tab:»·,trail:·,nbsp:·
 
 " Use 1 space after punctuation
 set nojoinspaces
-
-" Use silver searcher
-set grepprg=ag\ --nogroup\ --nocolor
-let g:ctrlp_user_command = 'ag --literal --files-with-matches --nocolor --hidden -g "" %s'
-let g:ctrlp_use_caching = 0
 
 " Make it obvious where 80 characters is
 set textwidth=110
@@ -90,3 +87,11 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_STORE\|git|vendor|public|tmp'
 set regexpengine=1
 let g:ruby_indent_block_style = 'do'
 
+" Use The Silver Searcher over native grep if it exists
+if executable('ag')
+  set grepprg=ag\ --nogroup\ --nocolor
+  " use ag in CtrlP for listing files. Respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  " ag is so fast we dont need a cache
+  let g:ctrlp_use_caching = 0
+endif
