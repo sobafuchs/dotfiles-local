@@ -48,6 +48,10 @@ brew install chtf
 brew install terraform
 brew install kubernetes-helm
 
+# haskell
+brew cask install haskell-platform
+brew install haskell-stack
+
 # node
 brew install yarn # for the js lovers
 
