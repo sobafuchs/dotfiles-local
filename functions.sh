@@ -28,6 +28,14 @@ function generate_ri_bundle_docs() {
   bundle list | tr -d '*(,)' | awk '{print $1, "--version", $2}' | xargs -n3 gem rdoc --ri --no-rdoc
 }
 
+function generate_ruby_project_ctags() {
+  ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths)
+}
+
+function whos_listening() {
+  lsof -i :$1
+}
+
 ##########
 # Docker
 ##########

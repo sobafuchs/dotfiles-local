@@ -34,16 +34,11 @@ export PATH="$PATH:$HOME/workspace/liqid/liqid-infrastructure/bin"
 autoload -U promptinit; promptinit
 prompt pure
 
-HISTSIZE=300
-# env vars for docker + dinghy
-# export DOCKER_HOST=tcp://192.168.64.2:2376
-# export DOCKER_CERT_PATH=/Users/varun/.docker/machine/machines/dinghy
-# export DOCKER_TLS_VERIFY=1
-# export DOCKER_MACHINE_NAME=dinghy
-# export LOGENTRIES_RW_KEY=ca66e911-fa0d-48eb-b121-69e56423bbb4
+HISTSIZE=600
+
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/roonie/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/roonie/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/roonie/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/roonie/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/roonie/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/roonie/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/roonie/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/roonie/google-cloud-sdk/completion.zsh.inc'; fi

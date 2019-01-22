@@ -30,6 +30,7 @@ brew install homebrew/dupes/openssh
 ################
 
 # survival
+brew install ctags
 brew install vim
 brew install git
 brew install the_silver_searcher
@@ -77,11 +78,9 @@ brew install git-crypt
 brew install docker
 brew install docker-machine
 brew install ctop # performance monitoring for docker containers
-brew install docker-machine-driver-xhyve
-sudo chown root:wheel $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
-sudo chmod u+s $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
-brew tap codekitchen/dinghy
-brew install dinghy
+
+# github
+brew install hub
 
 # nifty
 brew install q # use SQL on csvs

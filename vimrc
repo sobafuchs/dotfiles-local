@@ -17,6 +17,8 @@ Plug 'scrooloose/syntastic'
 Plug 'w0rp/ale'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'danchoi/ri.vim'
+Plug 'tpope/vim-commentary'
+Plug 'adelarsq/vim-matchit'
 call plug#end()
 
 set backspace=2		" Backspace deletes like most programs in insert mode
@@ -41,7 +43,7 @@ set list listchars=tab:»·,trail:·,nbsp:·
 set nojoinspaces
 
 " Make it obvious where 80 characters is
-set textwidth=110
+set textwidth=150
 set colorcolumn=+1
 
 " Numbers
