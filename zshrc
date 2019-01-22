@@ -1,6 +1,5 @@
 #!/bin/bash
 
-set -eu
 # Source project paths so they are globally accessible
 source $HOME/dotfiles/vars.sh
 source $HOME/dotfiles/aliases.sh
@@ -17,12 +16,6 @@ function code {
     open -a "Visual Studio Code" "$argPath"
   fi
 }
-
-# change terraform (homebrew doesnt allow you too specify a terraform version)
-# Source chtf
-if [[ -f /usr/local/share/chtf/chtf.sh ]]; then
-    source "/usr/local/share/chtf/chtf.sh"
-fi
 
 # awscli
 export PATH=Library/Python/3.6/bin:$PATH
