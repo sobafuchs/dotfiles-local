@@ -1,3 +1,6 @@
+#!/bin/bash
+
+set -eu
 # Source project paths so they are globally accessible
 source $HOME/dotfiles/vars.sh
 source $HOME/dotfiles/aliases.sh
@@ -35,7 +38,6 @@ autoload -U promptinit; promptinit
 prompt pure
 
 HISTSIZE=600
-
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/roonie/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/roonie/google-cloud-sdk/path.zsh.inc'; fi

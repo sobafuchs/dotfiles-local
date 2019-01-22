@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -eu
 
 # Installs CLI tools w/ homebrew
 sudo -v
