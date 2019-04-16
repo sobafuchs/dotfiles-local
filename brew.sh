@@ -14,17 +14,13 @@ brew upgrade
 
 # install GNU core utilities because OSX core is outdated
 brew install coreutils
-sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
+# sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
 
 # instals GNU find utils like `find` and `xargs`
 brew install findutils
 
 # Install bash 4
 brew install bash
-
-# Install more recent versions of some OSX tools
-brew install homebrew/dupes/grep
-brew install homebrew/dupes/openssh
 
 ################
 # Brew Recipes
@@ -45,17 +41,7 @@ brew install mas
 brew install wget
 
 # devops
-brew tap Yleisradio/terraforms
-brew install chtf
-brew install terraform
 brew install kubernetes-helm
-
-# haskell
-brew cask install haskell-platform
-brew install haskell-stack
-
-# node
-brew install yarn # for the js lovers
 
 # ruby
 brew install ruby-build
@@ -72,8 +58,6 @@ brew install pgcli # syntax highlighting and autocomplete for pg cli
 
 # security
 brew install blackbox
-brew install gpg-agent
-brew install git-crypt
 
 # docker
 brew install docker

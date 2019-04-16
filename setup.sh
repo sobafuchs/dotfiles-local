@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -eu
+# set -eu
 
 sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
@@ -49,9 +49,3 @@ ln -s $DOTFILES_PATH/agignore $HOME/.agignore
 # install plug for vim plugins
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 	     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-# install pip
-sudo python2.7 -m ensurepip --default-pip
-
-# install awscli
- pip3 install awscli --upgrade --user
