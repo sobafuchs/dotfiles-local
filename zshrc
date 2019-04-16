@@ -37,3 +37,5 @@ if [ -f '/Users/roonie/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/roonie/g
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/roonie/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/roonie/google-cloud-sdk/completion.zsh.inc'; fi
+
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
